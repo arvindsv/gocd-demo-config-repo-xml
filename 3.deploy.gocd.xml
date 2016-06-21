@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <pipelines group="demo">
+    <pipeline name="deploy">
+      <materials>
+        <pipeline pipelineName="build" stageName="build" />
+        <pipeline pipelineName="functional-test" stageName="build" />
+      </materials>
+      <stage name="deploy">
+        <jobs>
+          <job name="deploy">
+            <tasks>
+              <exec command="ls">
+                <arg>-l</arg>
+                <arg>.</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="test">
+        <jobs>
+          <job name="test">
+            <tasks>
+              <exec command="ls" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
+</cruise>

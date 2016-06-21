@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <pipelines group="functional-test">
-    <pipeline name="build">
+  <pipelines group="demo">
+    <pipeline name="functional-test">
       <materials>
         <git url="https://github.com/arvindsv/gocd-demo-config-repo-code" />
         <pipeline pipelineName="build" stageName="build" />
